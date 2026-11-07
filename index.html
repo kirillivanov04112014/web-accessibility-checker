@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Check common accessibility issues in HTML pages.">
+  <title>AccessCheck — Web Accessibility Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">
+      <span class="logo-icon">A</span>
+      AccessCheck
+    </a>
+    <span class="tag">OPEN SOURCE</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">WEB ACCESSIBILITY TOOL</p>
+      <h1>Make the web <span>accessible to everyone.</span></h1>
+      <p class="subtitle">
+        Analyze HTML code for common accessibility issues
+        and get practical recommendations to improve it.
+      </p>
+
+      <form id="check-form">
+        <label for="html-input">Paste your HTML code</label>
+        <textarea
+          id="html-input"
+          placeholder='<img src="photo.jpg"><button>Click</button>'
+          required
+        ></textarea>
+        <button type="submit">Check accessibility</button>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="results" class="results" hidden>
+      <h2>Accessibility report</h2>
+
+      <div class="score-card">
+        <span>Issues found</span>
+        <strong id="issue-count">0</strong>
+      </div>
+
+      <div id="issue-list" class="issue-list"></div>
+    </section>
+
+    <section class="info">
+      <h2>What does AccessCheck inspect?</h2>
+      <div class="info-grid">
+        <article>
+          <h3>Image descriptions</h3>
+          <p>Checks whether images have alternative text.</p>
+        </article>
+        <article>
+          <h3>Form labels</h3>
+          <p>Finds form fields without accessible labels.</p>
+        </article>
+        <article>
+          <h3>Page structure</h3>
+          <p>Checks headings and document language.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>AccessCheck — Built for a more accessible web.</p>
+    <p>Open source project · HTML, CSS and JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
